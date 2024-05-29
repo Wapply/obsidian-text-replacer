@@ -28,7 +28,7 @@ export class TextReplacerSettingsTab extends PluginSettingTab {
             const ruleDiv = this.rulesContainer.createEl('div', { attr: { class: 'text-replacer-rule' } });
 
             new Setting(ruleDiv)
-                .setName('Start Delimiter')
+                .setName('Start delimiter')
                 .addText(text => text
                     .setValue(rule.startDelimiter)
                     .onChange(async (value) => {
@@ -37,7 +37,7 @@ export class TextReplacerSettingsTab extends PluginSettingTab {
                     }));
 
             new Setting(ruleDiv)
-                .setName('End Delimiter')
+                .setName('End delimiter')
                 .addText(text => text
                     .setValue(rule.endDelimiter)
                     .onChange(async (value) => {
@@ -46,7 +46,7 @@ export class TextReplacerSettingsTab extends PluginSettingTab {
                     }));
 
             new Setting(ruleDiv)
-                .setName('Replacement Text')
+                .setName('Replacement text')
                 .addText(text => text
                     .setValue(rule.replacementText)
                     .onChange(async (value) => {
@@ -55,7 +55,7 @@ export class TextReplacerSettingsTab extends PluginSettingTab {
                     }));
 
             new Setting(ruleDiv)
-                .setName('Remove Rule')
+                .setName('Remove rule')
                 .addButton(button => button
                     .setButtonText('Remove')
                     .onClick(async () => {
@@ -67,7 +67,7 @@ export class TextReplacerSettingsTab extends PluginSettingTab {
 
         // Add the "Add Rule" button at the end of the rules
         new Setting(this.rulesContainer)
-            .setName('Add Rule')
+            .setName('Add rule')
             .addButton(button => button
                 .setButtonText('Add')
                 .onClick(() => this.addRule()));
