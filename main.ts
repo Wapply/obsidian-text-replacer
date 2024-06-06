@@ -1,5 +1,5 @@
 import { Plugin, MarkdownView } from 'obsidian';
-import { TextReplacerSettingsTab } from './settings'; // Adjust the path to match your directory structure
+import { TextReplacerSettingsTab } from './settings'; // Ajusta la ruta según tu estructura de directorios
 
 interface Rule {
     startDelimiter: string;
@@ -27,18 +27,18 @@ export default class TextReplacerPlugin extends Plugin {
     async onload() {
         await this.loadSettings();
 
-        // Add the command for replacing text between delimiters
+        // Agrega el comando para reemplazar texto entre delimitadores
         this.addCommand({
             id: 'replace-text-between',
-            name: 'Replace Text Between Delimiters',
+            name: 'Replace text between delimiters',  // Cambiado a sentence case
             callback: () => this.replaceTextBetween(),
         });
 
-        // Add the settings tab
+        // Agrega la pestaña de configuración
         this.addSettingTab(new TextReplacerSettingsTab(this.app, this));
 
-        // Add the icon button to the ribbon
-        this.addRibbonIcon('replace', 'Replace Text', () => {
+        // Agrega el botón de ícono a la barra lateral
+        this.addRibbonIcon('replace', 'Replace text', () => {  // Cambiado a sentence case
             this.replaceTextBetween();
         });
     }
